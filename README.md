@@ -1,2 +1,2 @@
-# Green-Haven
-portfolio project
+# GREEN HAVEN
+A Groceries ecommerce website
