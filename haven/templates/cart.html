@@ -1,0 +1,100 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Green Haven</title>
+	
+	<style>
+
+		.product-list {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			list-style: none;
+			padding: 0;
+		}
+
+		.product-item {
+
+			flex: 1;
+
+			margin: 10px;
+			border: 1px solid #ccc;
+			padding: 10px;
+			text-align: center;
+		}
+
+		.buy-now-button {
+			display: block;
+			margin-top: 10px;
+			background-color: #007bff;
+			color: #fff;
+			text-decoration: none;
+			padding: 5px 10px;
+			border-radius: 5px;
+		}
+	</style>
+</head>	
+
+
+<body>
+	<div class="row align-items-center py-3 px-xl-5">
+		<div class="col-lg-3 d-none d-lg-block">
+			<a href="" class="text-decoration-none">
+				<h1 class="m-0 display-6 font-weight-semi-bold"><span class="text-primary font-weight-bold border px-3 mr-1"></span>GREEN HAVEN</h1>
+			</a>
+		</div>
+		<div class="col-lg-6 col-6 text-left">
+			<form action="">
+				<div class="input-group">
+					<input type="text" class="form-control" placeholder="Search for products">
+					<div class="input-group-append">
+						<span class="input-group-text bg-transparent text-primary">
+							<i class="fa fa-search"></i>
+						</span>
+					</div>
+				</div>
+			</form>
+		</div>
+
+	<h1>Your Shopping Cart</h1>
+
+	<div class="product-list"></div>
+
+	{% for item in cart_items %}
+<div class="product-item" style="border: 1px solid #ccc; padding: 10px; margin-bottom: 10px;">
+
+    <p style="font-size: 20px; font-weight: bold;">{{ item.product.name }} ({{ item.quantity }})</p>
+    <p><img src="{{ item.product.image }}" alt="{{ item.product.name }}" style="max-width: 100px;"></p>
+    <p style="font-size: 18px; font-weight: bold;">Price: Ksh{{ item.product.price }}</p>
+    <a href="{% url 'cart:remove_from_cart' item.id %}" style="font-size: 16px; color: red;">Remove</a>
+
+</div>
+{% empty %}
+<p style="font-size: 18px; font-weight: bold;">Your cart is empty.</p>
+{% endfor %}
+
+<a href="payment" style="text-decoration: none; display: inline-block; padding: 10px 20px; background-color: green; color: white; font-size: 18px; font-weight: bold;">Total Price: Ksh{{ total_price }}</a>
+
+<a href="{% url 'cart:product_list' %}" style="display: inline-block; padding: 10px 20px; background-color: blue; color: white; font-size: 16px; text-decoration: none; margin-top: 10px;">Continue Shopping</a>
+
+	<div class="col-lg-4 col-md-6 pb-1">
+		<div class="cat-item d-flex flex-column border mb-4" style="padding: 30px;">
+			<p class="text-right">check out</p>
+			<a href="" class="cat-img position-relative overflow-hidden mb-3">
+				<img class="img-fluid" src="{% static 'img/cart.png' %}" alt="">
+			</a>
+			<h5 class="font-weight-semi-bold m-0">check below</h5>
+		</div>
+	</div>
+
+
+</body>
+
+</html>
+
+
