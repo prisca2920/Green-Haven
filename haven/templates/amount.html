@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel="stylesheet" href="{% static 'css/payment.css' %}">
+</head>
+<body>
+
+    <div class="col-lg-4 col-md-6 pb-1">
+		<div class="cat-item d-flex flex-column border mb-4" style="padding: 30px;">
+			<p class="text-right">check out</p>
+			<a href="" class="cat-img position-relative overflow-hidden mb-3">
+				<img class="img-fluid" src="{% static 'img/mpesa.png' %}" alt="">
+			</a>
+			<h5 class="font-weight-semi-bold m-0">please input your number</h5>
+		</div>
+	</div>
+
+
+    <form method="POST">
+        {% csrf_token %}
+         <h2>MPESA</h2>
+        <label for="phone_number">Phone Number:</label>
+        <input type="text" name="phone_number" required>
+        <br>
+        <label for="amount">Amount (KES):</label>
+        <input type="number" name="amount" required>
+        <br>
+        <button type="submit">Make Payment</button>
+    </form>
+
+</body>
+</html>
+
+
