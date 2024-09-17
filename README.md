@@ -4,7 +4,7 @@
 <p> Welcome to the Green Haven Groceries eCommerce Project! This platform provides a simple and efficient way to shop for groceries online. Whether you're a customer looking to stock up on fresh produce or household essentials, Green Haven offers a seamless shopping experience.
 </p>
 
-<img src="{% static 'img/all.png' %}" alt="Green Haven Logo">
+<img src="greenhaven.png" alt="Green Haven Logo">
 
 <h2> Features </h2>
 <li><b>User Authentication: </b></li>Secure user registration and login functionality for customers.
