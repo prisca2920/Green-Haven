@@ -1,0 +1,188 @@
+{% extends 'master.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container my-5">
+    <h1 class="text-center mb-4">Frequently Asked Questions</h1>
+    <div class="accordion" id="faqAccordion">
+        <div class="card">
+            <div class="card-header" id="faq1">
+                <h5 class="mb-0">
+                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne">
+                        How can I track my order?
+                    </button>
+                </h5>
+            </div>
+            <div id="collapseOne" class="collapse show" data-parent="#faqAccordion">
+                <div class="card-body">
+                    You can track your order through your account under "My Orders."
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header" id="faq2">
+                <h5 class="mb-0">
+                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseTwo">
+                        What is your return policy?
+                    </button>
+                </h5>
+            </div>
+            <div id="collapseTwo" class="collapse" data-parent="#faqAccordion">
+                <div class="card-body">
+                    We offer a 3-day return policy for unused products.
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header" id="faq3">
+                <h5 class="mb-0">
+                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseThree">
+                        Do you offer free shipping?
+                    </button>
+                </h5>
+            </div>
+            <div id="collapseThree" class="collapse" data-parent="#faqAccordion">
+                <div class="card-body">
+                    Yes, free shipping is available on orders over Ksh 2,000.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header" id="faq4">
+            <h5 class="mb-0">
+                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseFour">
+                    What payment methods do you accept?
+                </button>
+            </h5>
+        </div>
+        <div id="collapseFour" class="collapse" data-parent="#faqAccordion">
+            <div class="card-body">
+                We accept Visa, MasterCard, mobile payments (Mpesa), and bank transfers.
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="card-header" id="faq5">
+            <h5 class="mb-0">
+                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseFive">
+                    How long does delivery take?
+                </button>
+            </h5>
+        </div>
+        <div id="collapseFive" class="collapse" data-parent="#faqAccordion">
+            <div class="card-body">
+                Delivery takes 1-2 business days depending on your location.
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="card-header" id="faq6">
+            <h5 class="mb-0">
+                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseSix">
+                    Can I change my delivery address after placing an order?
+                </button>
+            </h5>
+        </div>
+        <div id="collapseSix" class="collapse" data-parent="#faqAccordion">
+            <div class="card-body">
+                Yes, you can update your delivery address by contacting customer support before the order is shipped.
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="card-header" id="faq7">
+            <h5 class="mb-0">
+                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseSeven">
+                    How can I cancel my order?
+                </button>
+            </h5>
+        </div>
+        <div id="collapseSeven" class="collapse" data-parent="#faqAccordion">
+            <div class="card-body">
+                You can cancel your order within 24 hours of placing it by visiting your account or contacting customer support.
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="card-header" id="faq8">
+            <h5 class="mb-0">
+                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseEight">
+                    Do you deliver to my location?
+                </button>
+            </h5>
+        </div>
+        <div id="collapseEight" class="collapse" data-parent="#faqAccordion">
+            <div class="card-body">
+                We deliver to most areas within Kenya. Please check our delivery coverage map for more information.
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="card-header" id="faq9">
+            <h5 class="mb-0">
+                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseNine">
+                    How can I return a product?
+                </button>
+            </h5>
+        </div>
+        <div id="collapseNine" class="collapse" data-parent="#faqAccordion">
+            <div class="card-body">
+                To return a product, fill out our return form and follow the instructions provided. Ensure the item is unused and in its original packaging.
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="card-header" id="faq10">
+            <h5 class="mb-0">
+                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseTen">
+                    Do you offer gift wrapping?
+                </button>
+            </h5>
+        </div>
+        <div id="collapseTen" class="collapse" data-parent="#faqAccordion">
+            <div class="card-body">
+                Yes, we offer gift wrapping services for a small additional fee. You can select this option during checkout.
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="card-header" id="faq11">
+            <h5 class="mb-0">
+                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseEleven">
+                    How do I apply a discount code?
+                </button>
+            </h5>
+        </div>
+        <div id="collapseEleven" class="collapse" data-parent="#faqAccordion">
+            <div class="card-body">
+                You can apply a discount code during checkout. Enter the code in the "Discount Code" box and click "Apply."
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="card-header" id="faq12">
+            <h5 class="mb-0">
+                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseTwelve">
+                    What should I do if I receive a damaged product?
+                </button>
+            </h5>
+        </div>
+        <div id="collapseTwelve" class="collapse" data-parent="#faqAccordion">
+            <div class="card-body">
+                If you receive a damaged product, contact our customer support immediately for a replacement or refund.
+            </div>
+        </div>
+    </div>    
+</div>
+{% endblock %}
